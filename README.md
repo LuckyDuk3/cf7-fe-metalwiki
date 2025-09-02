@@ -30,17 +30,27 @@ npm run preview  # Preview the production build locally
 npm run lint     # Run ESLint for code linting
 ```
 
+---
+
+## Access the App
 ```
-http://localhost:5000/
+Development mode (recommended): http://localhost:5000/
+Preview mode (production build): http://localhost:4173/ (or 5000 if using the port tip below)
 ```
 
 ---
 
 ## Notes
 
-- The frontend is configured to use the local backend at http://localhost:3000/api.
+- The frontend is configured to use the local backend at http://localhost:3000/api in api/axios.ts.
 - If you change the backend URL, update api/axios.ts accordingly.
 - Make sure the backend server is running before starting the frontend.
+- npm run preview serves the production build at a different port (default 4173).
+
+- To preview on the same port as dev for consistency, run:
+```bash
+npm run preview -- --port 5000
+```
 
 ---
 
